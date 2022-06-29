@@ -19,7 +19,7 @@ class Admin_home extends CI_Controller {
 	        $config['max_width'] = '';
 	        $config['max_height'] = '';
 	        $config['file_name'] = $file_name;
-	        $this->load->library('upload', $config);
+	       	        $this->load->library('upload', $config);
 	        $this->upload->initialize($config);
 	        $upload = $this->upload->do_upload('banner');
 	        if ( ! $upload){
