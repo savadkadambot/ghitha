@@ -195,6 +195,7 @@
                   <div class="row">
                     <div class="col-7 mr-5">
                       <form method="POST" action="" enctype="multipart/form-data">
+                        <input type="hidden" name="submit_type" value="upload_banner">
                         <div class="form-group">
                           <label for="addbannerfile">Add Banner file</label>
                           <div class="input-group">
@@ -391,14 +392,17 @@
                           </div>
                           <!-- /.card-header -->
                           <div class="card-body">
-                            <form action="">
+                            <form action="" method="POST" enctype="multipart/form-data">
                               <div class="card-body">
-                                <textarea id="summernote1">
-                              Place <em>some</em> <u>text</u> <strong>here</strong>
+                                <input type="hidden" value="food_items" name="submit_type">
+                                <textarea id="summernote1" name="note">
+                              <?php
+                              echo $food_item; 
+                              ?>
                             </textarea>
                               </div>
                               <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <input type="submit" name="submit" value="submit" class="btn btn-primary">
                               </div>
                             </form>
                           </div>
@@ -418,7 +422,25 @@
                             <!-- /.card-tools -->
                           </div>
                           <!-- /.card-header -->
+
                           <div class="card-body">
+                            <form action="" method="POST" enctype="multipart/form-data">
+                              <div class="card-body">
+                                <input type="hidden" value="non_food_items" name="submit_type">
+                                <textarea id="summernote1" name="note">
+                              <?php
+                              echo $non_food_item; 
+                              ?>
+                            </textarea>
+                              </div>
+                              <div class="card-footer">
+                                <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                              </div>
+                            </form>
+                          </div>
+
+
+                          <!-- <div class="card-body">
                             <form action="">
                               <div class="card-body">
                                 <textarea id="summernote1">
@@ -429,7 +451,7 @@
                                 <button type="submit" class="btn btn-primary">Save</button>
                               </div>
                             </form>
-                          </div>
+                          </div> -->
                           <!-- /.card-body -->
                         </div>
                         <!-- /.card -->

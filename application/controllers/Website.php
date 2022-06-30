@@ -62,6 +62,11 @@ class Website extends CI_Controller {
 		$data['news_and_media_link'] = base_url().'index.php/news-and-media';
 		$data['contact_us_link'] = base_url().'index.php/contact-us';
 
+		$this->load->model('Banner_model');
+		$services = $this->Banner_model->getServices();
+
+		$data['food_item'] = $services[0]['data'];
+		
 		$this->load->view('website/food_items',$data);
 	}
 
@@ -76,6 +81,11 @@ class Website extends CI_Controller {
 		$data['news_and_media_link'] = base_url().'index.php/news-and-media';
 		$data['contact_us_link'] = base_url().'index.php/contact-us';
 
+		$this->load->view('website/non_food_items',$data);
+		$services = $this->Banner_model->getServices();
+
+		$data['non_food_item'] = $services[0]['data'];
+		
 		$this->load->view('website/non_food_items',$data);
 	}
 

@@ -127,15 +127,18 @@
 
         <section class="about_two">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
+                <div class="row"><?php
+                                echo $food_item;
+                                ?>
+                    <!-- <div class="col-xl-6">
                         <div class="company_image wow fadeInUp">
                             <img src="<?php echo base_url(); ?>public_html/front_end/assets/images/service/services-food-items.png" alt="">
                         </div>
-                    </div>
-                    <div class="col-xl-6">
+                    </div> -->
+                    <!-- <div class="col-xl-6">
                         <div class="company_content">
                             <div class="company_content">
+                                
                                 <div class="block-title text-left">
                                     <p class="wow fadeInUp">Services We Offer</p>
                                     <h3 class="wow fadeInUp">Food Items</h3>
@@ -164,7 +167,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
